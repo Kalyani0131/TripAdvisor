@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripadvisor: Over a billion reviews & contributions for Hotels, Attractions, Restaurants, and more</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <button id="themeToggle" class="theme-toggle-btn">🌗 Toggle Theme</button>
+    <script>
+    const toggleBtn = document.getElementById('themeToggle');
+
+    toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+  window.onload = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  };
+</script>  
+</head>
+<body>
+  <script src="script.js"></script> 
+ <div class="header">
+    <div class="header__1">
+      <img src="./images/pngwing.com.png" alt="pngwing">
+      <h1>Tripadvisor</h1>
+      
+    </div>
+
+    <div class="header__2">
+      <p1>Discover</p1>
+      <p2>Trips</p2>
+      <p3>Reviews</p3>
+      <p4>Forums</p4>
+    </div>
+    
+    <div class="header__3">
+        <i class="fa-solid fa-globe" style="color: #000000;">| INR</i>
+        <p4>Sign In</p4>
+    </div>
+ </div>
+ <div class="heading">
+  <h1 id="main-heading">Where to?</h1>
+</div>
+ <div class="categories">
+  <div class="categories__1" onclick="updateHeading('Where to?')">
+    <i class="fa-solid fa-house" style="color: #000000;"></i>
+    <p>Search All</p>
+  </div>
+  <div class="categories__2" onclick="updateHeading('Stay somewhere great')">
+    <i class="fa-solid fa-bed" style="color: #000000;"></i>
+    <p>Hotels</p>
+  </div>
+  <div class="categories__3" onclick="updateHeading('Do something fun')">
+    <i class="fa-solid fa-camera" style="color: #000000;"></i>
+    <p>Things To Do</p>
+  </div>
+  <div class="categories__4" onclick="updateHeading('Find places to eat')">
+    <i class="fa-solid fa-utensils" style="color: #000000;"></i>
+    <p>Restaurants</p>
+  </div>
+  <div class="categories__5" onclick="updateHeading('Find the best flight')">
+    <i class="fa-solid fa-plane-up" style="color: #000000;"></i>
+    <p>Flights</p>
+  </div>
+  <div class="categories__6" onclick="updateHeading('Explore places to rent')">
+    <i class="fa-solid fa-igloo" style="color: #000000;"></i>
+    <p>Holiday Homes</p>
+  </div>
+</div>  
+ </div>
+  <div class="searchbar">
+    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+    <input type="text" placeholder="Places to go, things to do, hotels...
+    " class="searchbar__input">
+    <button class="searchbar__button">Search</button>
+  </div>
+      <div class="picture">
+        <img src="./images/picture frame.jpg" alt="picture">
+        <div class="picture__1">
+         <p1>Powered by AI </p1>
+          <p2>BETA</p2>
+        </div>
+        <div class="picture__2">
+          <p3>Plan your kind of</p3>
+          <p4>trip</p4>
+        </div>
+        <div class="picture__3">
+          <p5>Get custom recs for all the</p5>
+          <p6>things you’re into with AI trip</p6>
+          <p7>builder.</p7>
+        
+        </div>
+        <div class="picture__4">
+         <i class="fa-solid fa-wand-magic-sparkles" style="color: #000000;"></i>
+         <p8>Start a trip with AI</p8> 
+        </div>
+      </div> 
+   </body>   
+</html>
